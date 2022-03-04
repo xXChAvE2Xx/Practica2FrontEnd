@@ -9,11 +9,14 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Font Awesome icons-->
     <script src="./styles/js/all.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/css/all.css">
+    <link rel="stylesheet" href="./styles/css/fontawesome.min.css">
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet" />
     <!-- CSS Incluye Boostrap-->
     <link href="./styles/css/styles.css" rel="stylesheet" /> 
+
 </head>
 <body>
     <!-- Navigation-->
@@ -23,11 +26,10 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#page-top">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#Menu">Menú</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pastelAtuMedida">Pastel a tu medida</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobreNoSotros">Sobre nosotros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#page-top">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#Menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#sobreNoSotros">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="index.html#modalContacto">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -47,19 +49,102 @@
         <div class="bg-circle-4 bg-circle"></div>
     </header>
     <!-- Section 1 - arma tu pastel-->
-    <section id="sobreNoSotros">
+    <section id="empezar">
+    <form>
         <div class="container px-5">
             <div class="row gx-5 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <div class="p-5"><img class="img-fluid rounded-pill" src="" alt="..." /></div>
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-5">
-                        <p>Hola Mundo</p>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <h2 class="display-6">Seleccione sus sabores: </h2>
+                            <div class="card" style="width: 20rem;">
+                                <img src="./assets/img/chocolate.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Chocolate - $10</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <input type="checkbox" class="btn-check" id="chocolate" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="chocolate">Agregar</label><br>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 20rem;">
+                                <img src="./assets/img/fresa.jpg" alt="..." class="card-img-top">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Fresa - $10</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <input type="checkbox" class="btn-check" id="fresa" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="fresa">Agregar</label><br>
+                                </div>
+                            </div>
+                            <div class="card" style="width: 20rem;">
+                                <img src="./assets/img/limon.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                    <h5 class="card-title">Limon - $15</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <input type="checkbox" class="btn-check" id="limon" autocomplete="off">
+                                    <label class="btn btn-outline-primary" for="limon">Agregar</label><br>
+                                </div>
+                            </div>
                     </div>
+                    <br>
+                    <div class="row align-items-center">
+                        <h2 class="display-6">Seleccione sus decoraciones: </h2>
+                        <div class="card" style="width: 20rem;">
+                            <img src="./assets/img/decoracion1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Vela Aromatica - $17</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <input type="checkbox" class="btn-check" id="decoracion1" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="decoracion1">Agregar</label><br>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem;">
+                            <img src="./assets/img/decoracion2.jpg" alt="..." class="card-img-top">
+                                <div class="card-body">
+                                <h5 class="card-title">Chispas - $15</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <input type="checkbox" class="btn-check" id="decoracion2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="decoracion2">Agregar</label><br>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 20rem;">
+                            <img src="./assets/img/decoracion3.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                <h5 class="card-title">Santa - $47</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <input type="checkbox" class="btn-check" id="decoracion3" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="decoracion3">Agregar</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="display-6">A continuacion ingrese sus datos: </h2>
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" placeholder="Nombre Completo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefono" class="form-label">Teléfono:</label>
+                        <input type="tel" class="form-control" id="telefono" placeholder="3122080245">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Correo Electronico:</label>
+                        <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="detallesPastel" class="form-label">Detalles sobre su pastel:</label>
+                        <textarea class="form-control" id="detallesPastel" rows="3"></textarea>
+                      </div>
+                      <button type="button" class="btn btn-primary">Pedir Pastel</button>
                 </div>
             </div>
         </div>
+    </form>
+    <br>
     </section>
+    <footer class="py-5 bg-black">
+        <div class="container px-5"><p class="m-0 text-center text-white small"> &copy; Dulce Pastel 2022</p></div>
+    </footer>
 </body>
+<!-- Jquery -->
+<script src="./styles/js/jquery.js"></script>
+<!-- Core theme JS-->
+<script src="./styles/js/scripts.js"></script>
 </html>
